@@ -7,7 +7,6 @@ jekyll-seo-tag:
   title: Gabriel Won-Held
   tagline: "Um teste para mim mesmo"
   description: "Fazendo um teste."
-  baseurl: '/wh.github.io'
   url: 'https://gabrielwonheld.github.io'
   github:
     username: gabrielwonheld
