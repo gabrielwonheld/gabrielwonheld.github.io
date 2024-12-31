@@ -7,12 +7,12 @@ jekyll-seo-tag:
   title: Gabriel Won-Held
   tagline: "Um teste para mim mesmo"
   description: "Fazendo um teste."
-  url: "http://arthurhendrich.com"
+  url: "https://gabrielwonheld.github.io/wh.github.io/"
   github:
     username: gabrielwonheld
   social:
     name: Gabriel Won-Held
-    email: thebestguyfromwebbro@gmail.com
+    email: gabrielwonheld96@gmail.com
     links:
       - https://github.com/gabrielwonheld
       - https://www.linkedin.com/in/gabrielwonheld
@@ -39,10 +39,10 @@ comments:
   disqus:
     shortname: h3ndr1ch
   utterances:
-    repo: arthurhendrich/arthurhendrich.github.io
+    repo: gabrielwonheld/wh.github.io
     issue_term: 
   giscus:
-    repo: arthurhendrich/arthurhendrich.github.io
+    repo: gabrielwonheld/wh.github.io
     repo_id:
     category:
     category_id:
