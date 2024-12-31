@@ -29,7 +29,7 @@
   
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.3.3" />
+<meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Understanding Attack Serialization: An Introduction" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Today, we will discuss serialization and the risks associated with this technique. Serialization is a common technique used in software development to convert complex objects into a format that can be easily stored or transmitted. This process allows data to be saved in files, sent over networks, or passed between different components of an application. However, serialization also introduces significant security risks if not properly managed. When an application deserializes untrusted data, it becomes vulnerable to various attacks." />
@@ -154,12 +154,12 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a href="/" id="avatar" class="rounded-circle"><img src="/commons/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+    <a href="/" id="avatar" class="rounded-circle"><img src="/commons/avatar.jpeg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <h1 class="site-title">
-      <a href="/">H3NDR1CH</a>
+      <a href="/">Gabriel Won-Held</a>
     </h1>
-    <p class="site-subtitle fst-italic mb-0">Writeup's - Tools - Pentest Guide</p>
+    <p class="site-subtitle fst-italic mb-0">Um teste para mim mesmo</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -221,10 +221,10 @@
     
 
     
-    <a href="https://github.com/arthurhendrich" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/gabrielwonheld" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-github"></i>
     </a>
-    <a href="https://www.linkedin.com/in/arthurhendrich" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.linkedin.com/in/gabrielwonheld" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-linkedin"></i>
     </a>
   </div>
@@ -3411,7 +3411,7 @@
 
           <em>
             
-            <a href="">H3NDR1CH</a>
+            <a href="">Gabriel Won-Held</a>
             
           </em>
         </span>
@@ -6346,7 +6346,7 @@ public class SerializeMaliciousObject {
 <span class="nx">s</span><span class="p">.</span><span class="nf">sendall</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
 <span class="nx">s</span><span class="p">.</span><span class="nf">sendall</span><span class="p">(</span><span class="nx">data2</span><span class="p">)</span>
 
-<span class="nx">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="nx">payload</span><span class="p">,</span> <span class="dl">"</span><span class="s2">rb</span><span class="dl">"</span><span class="p">)</span> <span class="err">#</span><span class="nx">ysoserial</span> <span class="nx">payload</span> <span class="nx">without</span> <span class="nx">first</span> <span class="mi">4</span> <span class="nx">bytes</span>
+<span class="nx">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="nx">payload</span><span class="p">,</span> <span class="dl">"</span><span class="s2">rb</span><span class="dl">"</span><span class="p">)</span> <span class="nx">#ysoserial</span> <span class="nx">payload</span> <span class="nx">without</span> <span class="nx">first</span> <span class="mi">4</span> <span class="nx">bytes</span>
 <span class="nx">c</span> <span class="o">=</span> <span class="nx">f</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
 <span class="nx">s</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="nx">c</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
 </pre></td></tr></tbody></table></code></div></div>
@@ -7293,8 +7293,8 @@ public class SerializeMaliciousObject {
     © <time>2024</time>
 
     
-    <a href="https://github.com/arthurhendrich"
-      >H3NDR1CH</a
+    <a href="https://github.com/gabrielwonheld"
+      >Gabriel Won-Held</a
     >.  
     <span
       data-bs-toggle="tooltip"

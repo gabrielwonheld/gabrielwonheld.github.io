@@ -4,8 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> **Author**: H3NDR1CH
+> **Author**: GABRIEL WON-HELD
 
-> **Contact**: thebestguyfromwebbro@gmail.com
+> **Contact**: gabrielwonheld96@gmail.com
 
 **Hope you enjoy!**

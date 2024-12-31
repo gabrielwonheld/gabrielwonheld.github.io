@@ -1,11 +1,11 @@
 /*
- * The main dark mode styles
+ * The main dark mode styles 021d29 183948
  */
 
 @mixin dark-scheme {
   /* Framework color */
-  --main-bg: radial-gradient(ellipse at bottom, #021d29, transparent),
-              radial-gradient(ellipse at top, #183948, transparent);
+  --main-bg: radial-gradient(ellipse at bottom, #000000, transparent),
+              radial-gradient(ellipse at top, #2d203d, transparent);
   --mask-bg: rgb(68, 69, 70);
   --main-border-color: rgb(44, 45, 45);
 
@@ -38,7 +38,7 @@
   /* Sidebar */
   --site-title-color: rgba(0, 210, 238, 0.7);
   --site-subtitle-color: #868686;
-  --sidebar-bg: radial-gradient(circle, #183948 0%, #011219 100%);
+  --sidebar-bg: radial-gradient(circle, #2c1942 0%, #0f172a 100%);
   --sidebar-border-color: #292929;
   --sidebar-muted-color: #868686;
   --sidebar-active-color: rgba(0, 210, 238, 0.95);

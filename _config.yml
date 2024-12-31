@@ -4,20 +4,20 @@ lang: en
 timezone: America/Sao_Paulo
 
 jekyll-seo-tag:
-  title: H3NDR1CH
-  tagline: "Writeup's - Tools - Pentest Guide"
-  description: "H3NDR1CH is a blog about writeup's, tools, and pentest guide. Here you'll find the latest news, updates, and tutorials on cybersecurity."
+  title: Gabriel Won-Held
+  tagline: "Um teste para mim mesmo"
+  description: "Fazendo um teste."
   url: "http://arthurhendrich.com"
   github:
-    username: arthurhendrich
+    username: gabrielwonheld
   social:
-    name: H3NDR1CH
+    name: Gabriel Won-Held
     email: thebestguyfromwebbro@gmail.com
     links:
-      - https://github.com/arthurhendrich
-      - https://www.linkedin.com/in/arthurhendrich
+      - https://github.com/gabrielwonheld
+      - https://www.linkedin.com/in/gabrielwonheld
 
-avatar: "/commons/avatar.jpg"
+avatar: "/commons/avatar.jpeg"
 
 toc: true
 
