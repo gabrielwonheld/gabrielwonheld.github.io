@@ -6,13 +6,9 @@ mermaid: true
 image: ../assets/img/hackthebox/greenhorn/greenhorn.PNG
 ---
 
-Fractal was an extremely useful box to learn and train my MySQL skills. It starts with identifying a Symfony CMS through HTTP enumeration. 
+GreenHorn foi uma máquina excelente para treinar as minhas habilidades durante o pentest. Primeiro foi identificado o Pluck CMS. Ao investigar mais a fundo, descobri que na porta 3000 estava disponível o código-fonte do site, contendo credenciais de acesso. Em seguida, explorei uma vulnerabilidade na versão da aplicação, que permitiu um LFI (Local File Inclusion). Com isso, fiz o upload de um arquivo malicioso, o que proporcionou o primeiro acesso ao alvo.
 
-The Symfony profiler was explored, leading to finding sensitive files and obtaining database credentials. 
-
-Using these credentials, a Symfony exploit script was executed to achieve Remote Code Execution (RCE) and gain a reverse shell.
-
-Privilege escalation involved creating a new user via MySQL, allowing SSH access with elevated privileges, eventually leading to root access.
+Para escalar privilégios, encontrei um arquivo PDF com credenciais de acesso. Esse arquivo precisou ser "despixelado" para que o conteúdo pudesse ser lido corretamente. Após esse processo, obtive a senha do root, o que possibilitou a escalada de privilégios.
 
 # Diagram
 
