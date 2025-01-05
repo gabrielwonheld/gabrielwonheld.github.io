@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title></title>
   <subtitle></subtitle>
-  <updated>2025-01-04T13:23:56-03:00</updated>
+  <updated>2025-01-05T13:05:05-03:00</updated>
   <author>
     <name></name>
     <uri>http://localhost:4000/</uri>
@@ -20,40 +20,14 @@
 
   
   <entry>
-    <title>Understanding Attack Serialization: An Introduction</title>
-    <link href="http://localhost:4000/posts/Attacking-Serialization/" rel="alternate" type="text/html" title="Understanding Attack Serialization: An Introduction" />
-    <published>2024-07-31T00:00:00-03:00</published>
+    <title>Hack The Box - GreenHorn</title>
+    <link href="http://localhost:4000/posts/HackTheBox-Greenhorn/" rel="alternate" type="text/html" title="Hack The Box - GreenHorn" />
+    <published>2025-01-05T00:00:00-03:00</published>
   
-    <updated>2024-07-31T00:00:00-03:00</updated>
+    <updated>2025-01-05T00:00:00-03:00</updated>
   
-    <id>http://localhost:4000/posts/Attacking-Serialization/</id>
-    <content src="http://localhost:4000/posts/Attacking-Serialization/" />
-    <author>
-      <name></name>
-    </author>
-
-  
-    
-    <category term="Study" />
-    
-    <category term="Attack Serialization" />
-    
-  
-
-  <summary>Today, we will discuss serialization and the risks associated with this technique. Serialization is a common technique used in software development to convert complex objects into a format that can be easily stored or transmitted. This process allows data to be saved in files, sent over networks, or passed between different components of an application. However, serialization also introduces si...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Hack The Box - Conceal</title>
-    <link href="http://localhost:4000/posts/Hack-The-Box-Conceal/" rel="alternate" type="text/html" title="Hack The Box - Conceal" />
-    <published>2024-07-16T00:00:00-03:00</published>
-  
-    <updated>2024-07-31T16:19:57-03:00</updated>
-  
-    <id>http://localhost:4000/posts/Hack-The-Box-Conceal/</id>
-    <content src="http://localhost:4000/posts/Hack-The-Box-Conceal/" />
+    <id>http://localhost:4000/posts/HackTheBox-Greenhorn/</id>
+    <content src="http://localhost:4000/posts/HackTheBox-Greenhorn/" />
     <author>
       <name></name>
     </author>
@@ -62,62 +36,30 @@
     
     <category term="CTF" />
     
-    <category term="Hack The Box" />
+    <category term="Hack The Box - Play" />
     
   
 
-  <summary>Conceal was an engaging box to delve into advanced exploitation techniques involving VPN configurations and Windows privilege escalation.
+  <summary>Fractal was an extremely useful box to learn and train my MySQL skills. It starts with identifying a Symfony CMS through HTTP enumeration.
 
-The process began with thorough information gathering, starting with a full port scan that revealed various open UDP ports. Enumerating the ISAKMP and SNMP services provided critical insights, including a VPN password.
+The Symfony profiler was explored, leading to finding sensitive files and obtaining database credentials.
 
-Utilizing strongSwan, we configured a ...</summary>
+Using these credentials, a Symfony exploit script was executed to achieve Remote Code Execution (RCE) and gain a reverse shell.
+
+Privilege escalation ...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Hack The Box - Surveillance</title>
-    <link href="http://localhost:4000/posts/Hack-The-Box-Surveillance/" rel="alternate" type="text/html" title="Hack The Box - Surveillance" />
-    <published>2024-07-15T00:00:00-03:00</published>
-  
-    <updated>2024-07-31T16:19:57-03:00</updated>
-  
-    <id>http://localhost:4000/posts/Hack-The-Box-Surveillance/</id>
-    <content src="http://localhost:4000/posts/Hack-The-Box-Surveillance/" />
-    <author>
-      <name></name>
-    </author>
-
-  
-    
-    <category term="CTF" />
-    
-    <category term="Hack The Box" />
-    
-  
-
-  <summary>Surveillance was a complex and challenging box that required multiple exploitation techniques, including leveraging vulnerabilities in CraftCMS and ZoneMinder, along with performing lateral movement and privilege escalation.
-
-Diagram
-
-graph TD
-    A[Information Gathering] --&amp;amp;gt;|Port Scan| B[Enumeration]
-    B --&amp;amp;gt; C[HTTP 80]
-    C --&amp;amp;gt; D[CraftCMS Exploitation]
-    D --&amp;amp;gt; E[Lateral Moveme...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Proving Grounds - ClamAV</title>
-    <link href="http://localhost:4000/posts/Proving-Grounds-ClamAV/" rel="alternate" type="text/html" title="Proving Grounds - ClamAV" />
-    <published>2024-07-14T00:00:00-03:00</published>
+    <title>Proving Grounds - Fractal</title>
+    <link href="http://localhost:4000/posts/Proving-Grounds-Fractal/" rel="alternate" type="text/html" title="Proving Grounds - Fractal" />
+    <published>2024-07-10T00:00:00-03:00</published>
   
     <updated>2024-08-02T15:33:44-03:00</updated>
   
-    <id>http://localhost:4000/posts/Proving-Grounds-ClamAV/</id>
-    <content src="http://localhost:4000/posts/Proving-Grounds-ClamAV/" />
+    <id>http://localhost:4000/posts/Proving-Grounds-Fractal/</id>
+    <content src="http://localhost:4000/posts/Proving-Grounds-Fractal/" />
     <author>
       <name></name>
     </author>
@@ -130,43 +72,13 @@ graph TD
     
   
 
-  <summary>ClamAV was an insightful box to explore exploitation techniques for services like ClamAV-Milter.
+  <summary>Fractal was an extremely useful box to learn and train my MySQL skills. It starts with identifying a Symfony CMS through HTTP enumeration.
 
-The process started with comprehensive information gathering, including a full port scan revealing various open ports.
+The Symfony profiler was explored, leading to finding sensitive files and obtaining database credentials.
 
-The HTTP enumeration led to identifying and decoding a binary message, providing a potential password.
+Using these credentials, a Symfony exploit script was executed to achieve Remote Code Execution (RCE) and gain a reverse shell.
 
-Enumeration of SNMP services helped identify the running ClamAV-Milter serv...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Proving Grounds - Exfiltrated</title>
-    <link href="http://localhost:4000/posts/Proving-Grounds-Exfiltrated/" rel="alternate" type="text/html" title="Proving Grounds - Exfiltrated" />
-    <published>2024-07-13T00:00:00-03:00</published>
-  
-    <updated>2024-08-02T15:33:44-03:00</updated>
-  
-    <id>http://localhost:4000/posts/Proving-Grounds-Exfiltrated/</id>
-    <content src="http://localhost:4000/posts/Proving-Grounds-Exfiltrated/" />
-    <author>
-      <name></name>
-    </author>
-
-  
-    
-    <category term="CTF" />
-    
-    <category term="Proving Grounds - Play" />
-    
-  
-
-  <summary>Exfiltrated was a well-structured box that provided an excellent opportunity to exploit a Subrion CMS vulnerability and perform privilege escalation via an Exiftool exploit.
-
-Initial enumeration led to the discovery of Subrion CMS, and default credentials allowed for access to the admin panel.
-
-By exploiting a file upload vulnerability, a reverse shell was obtained. Further enumeration revealed...</summary>
+Privilege escalation ...</summary>
 
   </entry>
 
