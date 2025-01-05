@@ -1,7 +1,7 @@
 ---
-title: "Proving Grounds - Fractal"
-categories: [CTF, Proving Grounds - Play]
-tags: [EASY, Linux, Web, Symfony, MySQL]
+title: "Hack The Box - GreenHorn"
+categories: [CTF, Hack The Box - Play]
+tags: [EASY, Linux, Web, Gitea]
 mermaid: true
 image: ../assets/img/provingrounds/offsec.jpeg
 ---
@@ -34,13 +34,9 @@ graph TD
 ### Port Scan
 ---
 
-- `nmap -sS -Pn -n --open -p- -T4 192.168.192.233`
+- `nmap -Pn 10.10.11.25`
     
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled.png)
-    
-- `nmap -sVC -p 21,22,80 192.168.192.233`
-    
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%201.png)
+    ![Untitled](../assets/img/hackthebox/greenhorn/Untitled.png)
 
 
 ## Enumeration
@@ -49,76 +45,60 @@ graph TD
 
 ---
 
-- [http://192.168.192.233/](http://192.168.230.233/)
+- http://10.10.11.25/
     
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%202.png)
+    ![Untitled](../assets/img/hackthebox/greenhorn/Untitled%202.png)
     
-- [http://192.168.192.233/robots.txt](http://192.168.230.233/robots.txt) → CMS symfony 3.4
+- Há um direcionamento para: greenhorn.htb
     
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%203.png)
+    ![Untitled](../assets/img/hackthebox/greenhorn/Untitled%203.png)
 
-I Forced an error to appear
+- Edição do `/etc/hosts`
     
-- [http://192.168.192.233/app_dev.php/randomfile](http://192.168.230.233/app_dev.php/*)
+    ![Untitled](../assets/img/hackthebox/greenhorn/Untitled%204.png)
     
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%204.png)
-    
-- [http://192.168.192.233/app_dev.php/_profiler/empty/search/results?limit=10](http://192.168.230.233/app_dev.php/_profiler/empty/search/results?limit=10) 
-- [https://github.com/symfony/symfony/issues/28002](https://github.com/symfony/symfony/issues/28002)
-    
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%205.png)
-    
+- Acessando a página Web
 
-- Profile Token
+    ![Untitled](../assets/img/hackthebox/greenhorn/Untitled%205.png)
     
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%206.png)
+- Nome da possível aplicação:
     
-Accessed as if it were an admin panel.
-
-- [http://192.168.192.233/app_dev.php/_profiler/c7b124](http://192.168.192.233/app_dev.php/_profiler/c7b124) 
-    
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%207.png)
+    ![Untitled](../assets/img/hackthebox/greenhorn/Untitled%206.png)
     
 
-Checking the branch on GitHub, it is possible to view documentation about upgrading Symfony 3.x, so we might find sensitive files.
-
-- [https://github.dev/symfony/symfony/tree/3.4](https://github.dev/symfony/symfony/tree/3.4)
+- Campo de login
     
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%208.png)
-    
+    ![Untitled](../assets/img/hackthebox/greenhorn/Untitled%207.png)
 
-Then I decided to investigate the _profiler to find directories since I tried passing it as a URL and got nothing. I filtered by all these statuses to avoid issues.
 
-- `ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://192.168.192.233/app_dev.php/_profiler/FUZZ -fs 47400,47401,47402,47403,47404,47405,47406,47407,47408,47409,47410,47411,47412,47413,47414,47415,47416,47417,47418,47419,47420,47421,47422,47423,47424,47425,47426,47427,47428,47429,47430,47431,47432,47433,47434,47435,47436,47437,47438,47439,47440,47441,47442,47443,47444,47445,47446,47447,47448,47449,47450,47451,47452,47453,47454,47455,47456,47457,47458,47459,47460,47461,47462,47463,47464,47465,47466,47467,47468,47469,47470,47471,47472,47473,47474,47475,47476,47477,47478,47479,47480,47481,47482,47483,47484,47485,47486,47487,47488,47489,47490,47491,47492,47493,47494,47495,47496,47497,47498,47499`
-    
-Found 2 directories “latest” and “open”
+### HTTP 3000    
 
-![Untitled](../assets/img/provingrounds/Fractal/Untitled%209.png)
 
-![Untitled](../assets/img/provingrounds/Fractal/Untitled%2010.png)
+- Na porta 3000 encontramos uma aplicação Gitea, contendo o versionamento da aplicação (código fonte).
+
+    ![Untitled](../assets/img/hackthebox/greenhorn/Untitled%208.png)
     
 
-Investigating the latest had nothing...
-
-
-Says the file is not readable. So, I will try to read the file found “.yml” on GitHub.
-
-- [http://192.168.192.233/app_dev.php/_profiler/open](http://192.168.192.233/app_dev.php/_profiler/open)
+- Selecionando o botão "Explore" conseguimos encontrar o código fonte da página.
     
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%2011.png)
+    ![Untitled](../assets/img/hackthebox/greenhornUntitled%209.png)
+    ![Untitled](../assets/img/hackthebox/greenhornUntitled%210.png)
     
+- Em `GreenHorn/data/settings` Podemos encontrar informações da aplicação.
 
-- `ffuf -u http://192.168.192.233/app_dev.php/_profiler/open?FUZZ=app/config/parameters.yml -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -t 100 -fs 5522` → Found "file"
-    
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%2012.png)
-    
+    ![Untitled](../assets/img/hackthebox/greenhornUntitled%211.png)
 
-Now accessing the URL, I've found Database credentials.
+    $sitetitle = 'GreenHorn';
+    $email = 'admin@greenhorn.htb';
 
-- [http://192.168.192.233/app_dev.php/_profiler/open?file=app/config/parameters.yml](http://192.168.192.233/app_dev.php/_profiler/open?file=app/config/parameters.yml) 
-    
-    ![Untitled](../assets/img/provingrounds/Fractal/Untitled%2013.png)
-    
+- Foi obtido também um hash:
+
+    ![Untitled](../assets/img/hackthebox/greenhornUntitled%212.png)
+
+    ``` <?php
+$ww = 'd5443aef1b64544f3685bf112f6c405218c573c7279a831b1fe9612e3a4d770486743c5580556c0d838b51749de15530f87fb793afdcc689b6b39024d7790163';
+?> ```
+
 
 ## Exploitation
 
